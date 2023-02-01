@@ -1,0 +1,227 @@
+.form-container {
+  margin-top: 35px;
+  height: 100%;
+}
+
+.form-file {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+  overflow: hidden;
+}
+
+form button {
+  border: 0px;
+  padding: 8px 30px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 15px;
+  cursor: pointer;
+  background-color:#f8fafc;
+  border-width: 4px;
+  border-style: dashed;
+  border-color: #cbd5e1;
+}
+
+.loaded {
+  background-color: #5fb3b35e;
+  position: relative;
+}
+
+.dragging {
+  background-color: #5fb3b3;
+}
+
+.clear {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #f8fafc;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-image: url(../img/icon_close.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* DragDropFile */
+
+.upload-button {
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+}
+
+.upload-button:hover {
+  text-decoration-line: underline;
+}
+
+#drag-file-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+#label-file-upload {
+  height: 100%;
+  border-width: 5px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: #5fb3b35e;
+  padding: 20px;
+}
+
+.loaded #label-file-upload {
+  border-color: black;
+}
+
+
+#label-file-upload.drag-active {
+    background-color: #5FB3B3;
+    border-color: #5FB3B3;
+}
+
+input[type="file"] {
+  display:none;
+}
+  
+
+/* FileUploader */
+
+::file-selector-button {
+  border: 0px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: #92b0b3;
+  color: white;
+}
+
+#file-input-2 + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: #5FB3B3;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#file-input-2:focus + label,
+#file-input-2.has-focus + label {
+  background-color:#5FB3B3;
+}
+
+/* MyDropzone */
+
+
+
+
+
+
+
+
+
+
+/*
+.files input {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    padding-top: 120px;
+    padding-bottom: 85px;
+    padding-left: 35%;
+    text-align: center;
+    margin: 0;
+    width: 600px;
+}
+
+.files input:focus{     
+  outline: 2px dashed #92b0b3;  
+  outline-offset: -10px;
+  -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+ }
+
+.files{ position:relative}
+
+.files:after {  pointer-events: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 50px;
+    right: 0;
+    height: 56px;
+    content: "";
+    background-image: url(../img/icon_download.svg);
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.color input{ background-color:#f1f1f1;}
+
+.files:before {
+    position: absolute;
+    bottom: 10px;
+    left: 0;  pointer-events: none;
+    width: 100%;
+    right: 0;
+    height: 57px;
+    content: " or drag it here. ";
+    display: block;
+    margin: 0 auto;
+    color: #2ea591;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#form-file-upload {
+  height: 10rem;
+  width: 28rem;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+
+
+#label-file-upload {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+#label-file-upload.drag-active {
+  background-color: #ffffff;
+}
+
+
+ */
+
