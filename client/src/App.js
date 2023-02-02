@@ -3,6 +3,7 @@ import { FileUploader } from "./components/FileUploader";
 import { DragDropFile } from "./components/DragDropFile";
 import { MyDropzone } from "./components/MyDropzone";
 import { MyFileUploader } from "./components/MyFileUploader";
+import { MyFileUploaderDrop } from "./components/MyFileUploaderDrop";
 import { Preview } from "./components/Preview";
 import { ToastContainer } from "react-toastify";
 
@@ -23,6 +24,7 @@ function App() {
       <FileUploader onSuccess={onSuccess} />
       <MyDropzone onSuccess={onSuccess} />
       <MyFileUploader onSuccess={onSuccess} />
+      <MyFileUploaderDrop onSuccess={onSuccess} />
       <ToastContainer />
     </div>
   );

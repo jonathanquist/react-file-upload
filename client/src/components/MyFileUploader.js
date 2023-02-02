@@ -11,8 +11,15 @@ export const MyFileUploader = ({ onSuccess }) => {
     const data = new FormData();
     if (files.length > 0) {
       for (let i = 0; i < files.length; i++) {
+        /*if (!/^image\//.test(files[i].type)) {
+          console.error(
+            `${files[i].name} is a ${files[i].type}, and not an image.`
+          );
+          continue;
+        }*/
         data.append("file", files[i]);
       }
+
       axios
         .post("//localhost:8000/upload", data)
         .then((response) => {
@@ -28,7 +35,11 @@ export const MyFileUploader = ({ onSuccess }) => {
 
   const onDrop = (event) => {
     event.preventDefault();
-    setFiles(Array.from(event.dataTransfer.files));
+    //setFiles(Array.from(event.dataTransfer.files));
+    //setDragging(false);
+    const files = Array.from(event.dataTransfer.files);
+    const newState = validateFiles(files);
+    setFiles(newState);
     setDragging(false);
   };
 
@@ -43,7 +54,23 @@ export const MyFileUploader = ({ onSuccess }) => {
   };
 
   const onChange = (event) => {
-    setFiles(Array.from(event.target.files));
+    //setFiles(Array.from(event.target.files));
+    const files = Array.from(event.target.files);
+    const newState = validateFiles(files);
+    setFiles(newState);
+  };
+
+  const validateFiles = (files) => {
+    let cleanFiles = [];
+    for (let i = 0; i < files.length; i++) {
+      if (!/^image\//.test(files[i].type)) {
+        console.error(`${files[i].name} is not an image.`);
+        continue;
+      }
+      console.log(i);
+      cleanFiles.push(files[i]);
+    }
+    return cleanFiles;
   };
 
   const clearFiles = (event) => {

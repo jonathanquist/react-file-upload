@@ -5,6 +5,7 @@
 To start navigate to root folder then from the terminal/cmd type in these commands.
 
 'cd client'
+'npm install'
 'npm start'
 
 This inisalises the app on http://localhost:3000
@@ -14,6 +15,7 @@ This inisalises the app on http://localhost:3000
 If you want to be able to use the file uploaders then you need to open the terminal, from the root folder
 
 'cd server'
+'npm install -g nodemon'
 'nodemon server.js'
 
 If you're in the client folder, use 'cd ..'
